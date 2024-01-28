@@ -1,6 +1,15 @@
 import React from 'react'
 import PlainLayout from '@/components/master/PlainLayout';
 import NewsDetails from '@/components/news/NewsDetails';
+export async function generateMetadata() {
+
+    return {
+        title: "News Details Page",
+        description: "news aplication with popuer ,search,latest and new secton",
+        keywords: "News,Search,Populer,Latest,NeW"
+
+    }
+}
 
 async function getData(id) {
     try {

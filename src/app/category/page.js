@@ -5,6 +5,16 @@ import React from 'react'
 import { Card, CardHeader, CardFooter, Image, } from "@nextui-org/react";
 import Link from 'next/link';
 
+export async function generateMetadata() {
+
+    return {
+        title: "Category Page",
+        description: "news aplication with popuer ,search,latest and new secton",
+        keywords: "News,Search,Populer,Latest,NeW"
+
+    }
+}
+
 async function getData(id) {
     try {
         let data = (await (await fetch(`${process.env.HOST}/api/news/category?catId=${id}`)).json())['data'];
